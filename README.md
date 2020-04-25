@@ -1,27 +1,10 @@
 # MEUPROJETO
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A princípio o front-end será desta forma... A ideia no final do projeto é conseguir consumir uma API existente com este layout feito por mim e pelo meu querido e consagrado amigo gustavo. Release final praticamente. 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Antes de já ir testando ai na sua máquina favor baixar o pacote npm comando "npm i" ai da certo.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+##Contruibua po
+Cria uns componente que tu acha interessante e já faço um merge aqui hahaha flw até a próxima
