@@ -1,38 +1,68 @@
 <div class="container">
     <div class="conteudo">
+
         <div class="alert alert-success" role="alert" [hidden]="!adicionado">
             Livro: <strong>{{nome}}</strong> atualizado com o id: <strong>{{ultimoId}}</strong>
         </div>
 
-        <div class="input-group">
-            <input type="text" class="form-control" [(ngModel)]="nome" placeholder="Nome do livro">
-            <input type="text" class="form-control" [(ngModel)]="paginas" placeholder="Número de páginas">
-            <input type="text" class="form-control" [(ngModel)]="preco" placeholder="Preco do livro">
-            <input type="text" class="form-control" [(ngModel)]="codigo" placeholder="Código do livro">
-            <input type="text" class="form-control" [(ngModel)]="categoria" placeholder="Categoria do livro">
-            <button type="submit" class="btn btn-primary mb-2" (click)="adicionar(nome, paginas, preco, codigo, categoria)">Salvar alterações</button>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="Nome">Nome</label>
+                <input type="text" class="form-control" [(ngModel)]="nome" placeholder="Nome do livro">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="Paginas">Nº. de páginas</label>
+                <input type="text" class="form-control" [(ngModel)]="paginas" placeholder="Páginas">
+
+            </div>
+            <div class="form-group col-md-2">
+                <label for="Preco">Preço R&#36;</label>
+                <input type="text" class="form-control" [(ngModel)]="preco" placeholder="R&#36; ">
+            </div>
+            <div class=" form-group col-md-2 ">
+                <label for="codigo ">Código</label>
+                <input type="text" class="form-control" [(ngModel)]="codigo" placeholder="Cod. livro">
+            </div>
+            <div class="form-group col-md-3 ">
+                <label for="Categoria ">Categoria</label>
+                <select id="Categoria " [(ngModel)]="categoria" class="form-control ">
+              <option selected>Escolher...</option>
+              <option>Tragédia</option>
+              <option>Suspense</option>
+              <option>Romanece</option>
+              <option>Ação</option>
+              <option>Poesia</option>
+              <option>Ficção</option>
+              <option>História</option>
+              <option>Drama</option>
+            </select>
+            </div>
         </div>
-        <table class=" table table-striped ">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Paginas</th>
-                    <th>Preco</th>
-                    <th>Código</th>
-                    <th>Categoria</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let livro of livroAdd ">
-                    <td>{{livro.id}}</td>
-                    <td>{{livro.nome}}</td>
-                    <td>{{livro.paginas}}</td>
-                    <td>R${{livro.preco}}</td>
-                    <td>{{livro.codigo}}</td>
-                    <td>{{livro.categoria}}</td>
-                </tr>
-            </tbody>
-        </table>
+        <hr>
+        <button id="button " type=" submit " class="btn btn-primary mb-2 " (click)="adicionar(nome, paginas, preco, codigo, categoria) ">Salvar alterações</button>
+        <hr>
     </div>
+
+    <table class=" table table-striped ">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Paginas</th>
+                <th>Preco R&#36;</th>
+                <th>Código</th>
+                <th>Categoria</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let livro of livroAdd ">
+                <td>{{livro.id}}</td>
+                <td>{{livro.nome}}</td>
+                <td>{{livro.paginas}}</td>
+                <td>R${{livro.preco}}</td>
+                <td>{{livro.codigo}}</td>
+                <td>{{livro.categoria}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
