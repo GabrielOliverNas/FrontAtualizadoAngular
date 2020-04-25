@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="conteudo">
+        <div class="alert alert-success" role="alert" [hidden]="!adicionado">
+            Livro: <strong>{{nome}}</strong> atualizado com o id: <strong>{{ultimoId}}</strong>
+        </div>
+
+        <div class="input-group">
+            <input type="text" class="form-control" [(ngModel)]="nome" placeholder="Nome do livro">
+            <input type="text" class="form-control" [(ngModel)]="paginas" placeholder="Número de páginas">
+            <input type="text" class="form-control" [(ngModel)]="preco" placeholder="Preco do livro">
+            <input type="text" class="form-control" [(ngModel)]="codigo" placeholder="Código do livro">
+            <input type="text" class="form-control" [(ngModel)]="categoria" placeholder="Categoria do livro">
+            <button type="submit" class="btn btn-primary mb-2" (click)="adicionar(nome, paginas, preco, codigo, categoria)">Salvar alterações</button>
+        </div>
+        <table class=" table table-striped ">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Paginas</th>
+                    <th>Preco</th>
+                    <th>Código</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let livro of livroAdd ">
+                    <td>{{livro.id}}</td>
+                    <td>{{livro.nome}}</td>
+                    <td>{{livro.paginas}}</td>
+                    <td>R${{livro.preco}}</td>
+                    <td>{{livro.codigo}}</td>
+                    <td>{{livro.categoria}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

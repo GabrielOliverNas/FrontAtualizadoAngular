@@ -5,22 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  ultimoId = 0;
-  nome = 'Gustavo';
-  adicionado = false;
-  funcionarios = [];
-
-  adicionar(){
-    console.log(`Adicionando ${this.nome}`);
-    this.adicionado = true;
-
-    this.funcionarios.push({
-
-      id: ++this.ultimoId,
-      nome: this.nome
-    });
-  }
-
-
-}
+export class AppComponent {}
