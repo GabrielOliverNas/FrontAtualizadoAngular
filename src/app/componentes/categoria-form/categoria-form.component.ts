@@ -10,7 +10,7 @@ export class CategoriaFormComponent implements OnInit {
   constructor() { }
   id: number;
   nome: string;
-  
+
   ngOnInit(): void {
   }
 
