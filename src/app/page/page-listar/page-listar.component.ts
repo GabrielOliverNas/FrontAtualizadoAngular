@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-listar',
   templateUrl: './page-listar.component.html',
   styleUrls: ['./page-listar.component.css']
 })
-export class PageListarComponent implements OnInit {
+export class PageListarComponent {
 
-  constructor() { }
+  constructor(private router: Router){
 
-  ngOnInit(): void {
   }
+
+  voltarParaHome(): void {
+
+    this.router.navigate(['home']);
+  }
+
 
 }

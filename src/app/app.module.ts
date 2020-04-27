@@ -11,6 +11,7 @@ import { PageHomeComponent } from './page/page-home/page-home.component';
 import { PageListarComponent } from './page/page-listar/page-listar.component';
 import { CardComponent } from './componentes/card/card.component';
 import { HeaderComponent } from './componentes/header/header.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HeaderComponent } from './componentes/header/header.component';
     PageListarComponent,
     PageCadastrarComponents,
     CardComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

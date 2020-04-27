@@ -1,6 +1,15 @@
 .header-container {
-  background: blue;
+  background: burlywood;
   color: aliceblue;
-  height: 50px;
-  width: 500px;
+  height: 100px;
+  width:auto;
+  margin: auto;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  text-align: right;
+}
+button {
+  margin: 3px;
+
 }

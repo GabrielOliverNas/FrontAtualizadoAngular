@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CategoriaFormComponent } from 'src/app/componentes/categoria-form/categoria-form.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-cadastrar',
@@ -10,7 +11,7 @@ import { CategoriaFormComponent } from 'src/app/componentes/categoria-form/categ
 
 export class PageCadastrarComponents {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ultimoId = 0;
   nome: string;
@@ -31,6 +32,11 @@ export class PageCadastrarComponents {
       codigo: this.codigo,
       categoria: this.categoria
     });
+  }
+
+  voltarParaHome(): void {
+
+    this.router.navigate(['home']);
   }
 
 
