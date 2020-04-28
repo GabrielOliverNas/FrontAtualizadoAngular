@@ -1,16 +1,6 @@
 <app-card>
-
-
-  <button id="button " type=" submit " class="btn btn-primary mb-2 " >
-    Consultar
-  </button>
-
-  <button id="button " type=" submit " class="btn btn-primary mb-2 " (click)="voltarParaHome()">
-    Voltar para a Tela Inicial
-
-  </button>
+    <div *ngFor="let cat of categorias">
+        {{cat.id}} - {{cat.nome}}
+    </div>
 
 </app-card>
-
-
-

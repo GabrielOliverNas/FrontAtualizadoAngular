@@ -1,7 +1,7 @@
 import { AppRoutingModule } from './app-routing.module';
 import { PageCadastrarComponents } from './page/page-cadastrar/page-cadastrar.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { PageListarComponent } from './page/page-listar/page-listar.component';
 import { CardComponent } from './componentes/card/card.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

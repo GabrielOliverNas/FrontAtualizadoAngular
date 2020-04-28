@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CategoriaFormComponent } from 'src/app/componentes/categoria-form/categoria-form.component';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-page-cadastrar',
@@ -9,35 +10,27 @@ import { Router } from '@angular/router';
 })
 
 
-export class PageCadastrarComponents {
+// tslint:disable-next-line: component-class-suffix
+export class PageCadastrarComponents implements OnInit{
 
-  constructor(private router: Router) { }
+  public formulario: FormGroup;
 
-  ultimoId = 0;
-  nome: string;
-  preco: number;
-  adicionado = false;
-  paginas: number;
-  categoria: CategoriaFormComponent;
-  livroAdd = [];
-  codigo: number;
+  constructor(private router: Router,
+              private formBuilder: FormBuilder) { }
 
-  adicionar(nome, paginas, preco, codigo, categoria) {
-    this.adicionado = true;
-    this.livroAdd.push({
-      id: ++this.ultimoId,
-      nome: this.nome,
-      paginas: this.paginas,
-      preco: this.preco,
-      codigo: this.codigo,
-      categoria: this.categoria
-    });
-  }
+    ngOnInit(){
+      this.formulario = this.formBuilder.group({
+        nome: [null, [
+          Validators.required,
+        ]]
 
-  voltarParaHome(): void {
-
-    this.router.navigate(['home']);
-  }
-
-
+      });
+    }
+    submitForm(){
+      console.log(this.formulario.value);
+      console.log(this.formulario.valid);
+    }
+    onClickLimpar(){
+      this.formulario.reset();
+    }
 }
