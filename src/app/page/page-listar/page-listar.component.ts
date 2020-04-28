@@ -1,7 +1,7 @@
-import { Categoria } from './../../domain/categoria';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Categoria } from 'src/app/domain/categoria';
 
 @Component({
   selector: 'app-page-listar',
@@ -26,7 +26,6 @@ export class PageListarComponent implements OnInit {
 
   }
   voltarParaHome(): void {
-
     this.router.navigate(['home']);
   }
 
